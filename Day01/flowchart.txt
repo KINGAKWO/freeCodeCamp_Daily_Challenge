@@ -1,0 +1,22 @@
+         START
+           │
+           ▼
+  Is word length < 3?
+       │        │
+      YES       NO
+       │        │
+       ▼        ▼
+Append word   Extract first letter
+ unchanged    Extract last letter
+              Extract middle letters
+              Sort middle letters
+              Rebuild word
+               │
+               ▼
+      Append jumbled word
+           │
+           ▼
+          NEXT WORD
+           │
+           ▼
+          END
