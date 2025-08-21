@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 Given an integer from zero to 20, return the factorial of that number. 
+=======
+Given an integer from zero to 20, return the factorial of that number. 
+>>>>>>> ec33a251652659f92073ba3ed7671739354a1f88
 The factorial of a number is the product of all the numbers between 1 and the given number.

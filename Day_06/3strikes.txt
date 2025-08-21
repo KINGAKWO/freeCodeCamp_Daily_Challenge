@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 Given an integer between 1 and 10,000, 
+=======
+Given an integer between 1 and 10,000, 
+>>>>>>> ec33a251652659f92073ba3ed7671739354a1f88
 return a count of how many numbers from 1 up to that integer whose square contains at least one digit 3.
