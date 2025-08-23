@@ -1,0 +1,20 @@
+My Thought Process
+At first, I thought: "Negative primes? That’s just primes with a minus sign."
+And that’s exactly the trick — check primality on the absolute value of the number, then decide if it’s valid.
+
+
+Python Concepts in Action
+- abs() → Handle negative numbers without extra logic.
+- Loop to √n → Efficient primality check.
+- Conditionals → Filter out 0, 1, and -1 early.
+- Boolean Return → True if prime (positive or negative), False otherwise.
+
+Day 08: Unnatural Prime — When Primes Go Negative ⚡
+Today’s #freeCodeCamp challenge was a twist on a classic:
+Determine if a number is a prime or a negative prime.
+
+A prime is a positive integer > 1 divisible only by 1 and itself.
+A negative prime is simply the negative version of a prime.
+(And no, 0 and 1 don’t make the cut.)
+
+
