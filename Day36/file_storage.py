@@ -39,3 +39,12 @@ def number_of_files(file_size, unit, drive_capacity_gb):
     drive_capacity_bytes = drive_capacity_gb * conversions["GB"]
 
     return int(drive_capacity_bytes // file_size_bytes)
+
+# Example usage:
+if __name__ == "__main__":
+    try:
+        print(number_of_files(500, "MB", 2))  # Output: 4
+        print(number_of_files(1.5, "GB", 10))  # Output: 6
+        print(number_of_files(200, "KB", 1))   # Output: 5000
+    except ValueError as e:
+        print(e)
