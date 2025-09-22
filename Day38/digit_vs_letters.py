@@ -1,21 +1,22 @@
-def digits_or_letters(s):
+def digits_or_letters(s: str) -> str:
     """
-    This function takes a string as input and returns "letters"
-    if the string contains more letters than digits,
-    "digits" if it contains more digits than letters, or "tie" if the counts
+    Determine whether a string has more digits, more letters, or a tie.
+    
+    Digits: 0–9
+    Letters: A–Z, a–z
+    Any other characters are ignored.
+    
+    Args:
+        s (str): The input string.
+    
+    Returns:
+        str: "digits", "letters", or "tie"
     """
-    count_letters = 0
-    count_digits = 0
-
-    for char in s:
-        if char.isalpha():
-            count_letters += 1
-        elif char.isdigit():
-            count_digits += 1
+    count_letters = sum(1 for char in s if char.isalpha())
+    count_digits = sum(1 for char in s if char.isdigit())
 
     if count_letters > count_digits:
         return "letters"
     elif count_digits > count_letters:
         return "digits"
-    else:
-        return "tie"
+    return "tie"
