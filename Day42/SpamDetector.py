@@ -1,6 +1,11 @@
+import re
+
+
 def is_spam(phone):
     """
-    Determines if a phone number is spam based on formatting and digit patterns.
+    Determines if a phone number is spam
+    based on formatting and digit patterns.
+
 
     Format: "+A (BBB) CCC-DDDD"
     - A: Country code (any length)
@@ -16,7 +21,6 @@ def is_spam(phone):
     Returns:
         bool: True if spam, False otherwise
     """
-    import re
 
     # Extract digits using regex
     match = re.match(r"\+(\d+)\s\((\d{3})\)\s(\d{3})-(\d{4})", phone)
