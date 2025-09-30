@@ -1,0 +1,25 @@
+Phone Number Formatter
+Given a string of ten digits,
+return the string as a phone number in this format:
+ "+D (DDD) DDD-DDDD"
+
+
+Day 45 – freeCodeCamp Daily Challenge: Phone Number Formatter
+Today’s challenge was about taking a raw string of digits and turning it into a properly formatted phone number:
+"+D (DDD) DDD-DDDD"
+I went with Python’s re.fullmatch to validate and capture the parts of the number in one shot:
+import re
+
+def format_number(s):
+    number = re.fullmatch(r"(\d)(\d{3})(\d{3})(\d{4})", s)
+    if not number:
+        raise ValueError("Input must be exactly 10 digits")
+    return f"+{number.group(1)} ({number.group(2)}) {number.group(3)}-{number.group(4)}"
+
+
+Why regex instead of just slicing the string?
+- Validation: it guarantees the input is exactly 10 digits, nothing more, nothing less.
+- Clarity: the groups make it obvious which part is country code, area code, prefix, and suffix.
+- Scalability: if I ever need to extend this to handle different formats, regex gives me a solid foundation.
+In the real world, formatting and validating phone numbers is one of those deceptively simple problems that can cause headaches if you cut corners. A little upfront rigor saves you from messy bugs later.
+If you want to try the challenge yourself, here’s the link:

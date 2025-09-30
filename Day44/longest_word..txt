@@ -1,0 +1,24 @@
+Day 44 of my freeCodeCamp Daily Python Challenge – Longest Word
+
+Today’s challenge was about digging into strings and pulling out the longest word in a sentence. 📝
+
+The twist?
+
+Ignore punctuation like periods.
+
+If there’s a tie, return the first longest word.
+
+Instead of manually splitting and trimming, I leaned on Python’s re (regex) module to extract clean words, then used max() with key=len to find the winner. Simple, powerful, and very Pythonic.
+
+💡 Lesson reinforced: sometimes the best solution isn’t more loops or conditions — it’s knowing the right tool (re.findall) and combining it with built-in functions.
+
+Longest Word
+Given a sentence, return the longest word in the sentence.
+
+Ignore periods (.) when determining word length.
+If multiple words are ties for the longest, return the first one that occurs.
+
+Tests
+Passed:1. get_longest_word("coding is fun") should return "coding".
+Passed:2. get_longest_word("Coding challenges are fun and educational.") should return "educational".
+Passed:3. get_longest_word("This sentence has multiple long words.") should return "sentence".
